@@ -1,7 +1,12 @@
 {{ define "main" }}
 <main class="products">
-{{ range .Site.Data.products }}
+<!--{{ range .Site.Data.products }}
+  {{ partial "product" . }}
+{{ end }} -->
+
+{{ range first 1 .Site.Data.products }}
   {{ partial "product" . }}
 {{ end }}
+
 </main>
 {{ end }}
